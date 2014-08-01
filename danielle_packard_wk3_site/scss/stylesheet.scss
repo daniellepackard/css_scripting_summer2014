@@ -5,20 +5,26 @@
 @import "variables.scss";
 @import "mixins.scss";
 
+// styles begin here
+
+/* the parent element of all the other elements it contains, the descendent of the html element */
 body {
 	@include body;
 }
 
+/* example of the use of box-sizing property...love this property */
 *, *:before, *:after {
 	@include box-sizing;
 }
 
+/* example of the use of a background to lend texture and interest to the site, as well as a subtle feel for the content */
 .background {
 	background-image: url(../images/ricepaper_v3.png);
 	background-repeat: repeat;
-	background-size: cover;
+	background-size: cover;   /* the cover property forces the image to fit to the width and height of the containing element */
 }
 
+/* example of new html5 element, header, to contain the navigation */
 header {
 	height: 50px;
 	border-bottom: 1px solid rgb(93,40,0);
@@ -47,6 +53,8 @@ li {
 	text-transform: uppercase;
 }
 
+/* example of the inclusion of image elements */
+/* example of the use of the clear to return page flow back to normal from the right float used in the nav */
 .img_1, .img_2 {
 	clear: both;
 	text-align: center;
@@ -74,11 +82,13 @@ span {
 	text-weight: 700;
 }
 
+/* an example of the use of the new html5 article element to contain the article content of the site */
 article p {
 	@include article_p;
 	@include layout;
 }
 
+/* an example of the use of the new html5 aside element to contain the tangentially related page link content to the main page content */
 aside {
 	@include layout;
 	color: $text-color;
@@ -88,6 +98,7 @@ aside {
 }
 
 /* navigation links */
+/* example of the use of pseudo-class selectors and proper ordering of links to effect the way links look */
 a  {
 	text-decoration: none;
 }

@@ -1,21 +1,26 @@
 /* stylesheet */
 /* variables */
 /* mixins */
+/* the parent element of all the other elements it contains, the descendent of the html element */
 body {
   margin: 0;
   padding: 0;
   width: 100%; }
 
+/* example of the use of box-sizing property...love this property */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* example of the use of a background to lend texture and interest to the site, as well as a subtle feel for the content */
 .background {
   background-image: url(../images/ricepaper_v3.png);
   background-repeat: repeat;
-  background-size: cover; }
+  background-size: cover;
+  /* the cover property forces the image to fit to the width and height of the containing element */ }
 
+/* example of new html5 element, header, to contain the navigation */
 header {
   height: 50px;
   border-bottom: 1px solid #5d2800;
@@ -40,6 +45,8 @@ li {
   padding: 15px;
   text-transform: uppercase; }
 
+/* example of the inclusion of image elements */
+/* example of the use of the clear to return page flow back to normal from the right float used in the nav */
 .img_1, .img_2 {
   clear: both;
   text-align: center;
@@ -69,6 +76,7 @@ h2 {
 span {
   text-weight: 700; }
 
+/* an example of the use of the new html5 article element to contain the article content of the site */
 article p {
   font-family: "PT Serif", serif;
   font-size: .9em;
@@ -79,6 +87,7 @@ article p {
   margin-left: 25%;
   margin-right: 25%; }
 
+/* an example of the use of the new html5 aside element to contain the tangentially related page link content to the main page content */
 aside {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -90,6 +99,7 @@ aside {
   font-weight: 600; }
 
 /* navigation links */
+/* example of the use of pseudo-class selectors and proper ordering of links to effect the way links look */
 a {
   text-decoration: none; }
 
