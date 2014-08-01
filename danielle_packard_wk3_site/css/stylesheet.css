@@ -1,0 +1,117 @@
+/* stylesheet */
+/* variables */
+/* mixins */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.background {
+  background-image: url(../images/ricepaper_v3.png);
+  background-repeat: repeat;
+  background-size: cover; }
+
+header {
+  height: 50px;
+  border-bottom: 1px solid #5d2800;
+  background-color: #734300;
+  -webkit-box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.36);
+  box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.36); }
+
+nav {
+  float: right;
+  margin-right: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: .8em; }
+
+ul {
+  padding-top: 15px; }
+
+li {
+  list-style-type: none;
+  display: inline;
+  padding: 15px;
+  text-transform: uppercase; }
+
+.img_1, .img_2 {
+  clear: both;
+  text-align: center;
+  margin-top: 30px; }
+
+.img_3 {
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0; }
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  margin-top: 30px; }
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: .6em;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  padding-top: 7px; }
+
+span {
+  text-weight: 700; }
+
+article p {
+  font-family: "PT Serif", serif;
+  font-size: .9em;
+  font-weight: 400;
+  line-height: 1.1em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 25%;
+  margin-right: 25%; }
+
+aside {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 25%;
+  margin-right: 25%;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-size: .8em;
+  font-weight: 600; }
+
+/* navigation links */
+a {
+  text-decoration: none; }
+
+a:link {
+  color: #fffae3; }
+
+a:visited {
+  color: #f2efe0; }
+
+a:hover {
+  color: #d9d6c6; }
+
+aside a {
+  text-decoration: underline; }
+
+aside a:link {
+  color: #734300; }
+
+aside a:visited {
+  color: #734300;
+  /* normally I would change the link and visited text colors so that the user knew they had explored a certain link. in this case I'm making them the same consciously */ }
+
+aside a:hover {
+  color: #5d2800;
+  background-color: #d9d6c6; }
