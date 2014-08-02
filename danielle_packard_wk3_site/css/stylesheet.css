@@ -29,6 +29,7 @@ header {
   -moz-box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.36);
   box-shadow: 10px 10px 22px 0px rgba(0, 0, 0, 0.36); }
 
+/* an example of the float property, which takes element it is applied to out of the normal flow, placing it where it is floated */
 nav {
   float: right;
   margin-right: 50px;
@@ -52,10 +53,11 @@ li {
   text-align: center;
   margin-top: 30px; }
 
-.img_3 {
-  text-align: center;
-  margin-left: 0;
-  margin-right: 0; }
+/* another example of the use of the float property with a left margin and padding all the way around applied to give the image 'breathing space' */
+.img_3, .img_4 {
+  float: right;
+  margin-left: 10px;
+  padding: 10px; }
 
 h1 {
   font-family: "Open Sans", sans-serif;
@@ -74,7 +76,8 @@ h2 {
   padding-top: 7px; }
 
 span {
-  text-weight: 700; }
+  text-weight: 700;
+  text-transform: uppercase; }
 
 /* an example of the use of the new html5 article element to contain the article content of the site */
 article p {
