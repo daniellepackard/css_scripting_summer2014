@@ -6,6 +6,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  height: 100%; }
+
 body {
   margin: 0;
   padding: 0;
@@ -14,7 +17,6 @@ body {
   color: #fff; }
 
 .background {
-  background-color: #000;
   background-image: url(../images/dark_wood.png);
   background-attachment: scroll; }
 
@@ -153,14 +155,9 @@ main li {
 .warning {
   font-size: .5em; }
 
-footer {
-  background-color: rgba(255, 255, 255, 0.2);
-  height: 100px; }
-
 footer p {
   font-size: .6em;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.7);
   padding-bottom: 10px;
   line-height: .8em;
   letter-spacing: 3px;
