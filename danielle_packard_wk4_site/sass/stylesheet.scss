@@ -15,21 +15,24 @@ html {
 
 body {
 	@include body;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Raleway', sans-serif;  /* example of the use of a web font from Google Fonts */
 	color: #fff;
 }
 
+/* an example of the use of a background that has been set to scroll as you move up or down the page */
 .background {
-	background-image: url(../images/dark_wood.png);
+	background-image: url(../images/dark_wood.png);  
 	background-attachment: scroll;
 }
 
+/* use of the new HTML5 header element to contain the logo, top image and navigation elements of the page */
 header {
 	height: 82px;
 	width: 100%;
 	background-color: #fff;
 }
 
+/* an example of specifically targeting the paragraphs that follow the header */
 header p {
 	text-align: center;
 	padding-top: 3px;
@@ -47,6 +50,7 @@ header p {
 	clear: both;
 }
 
+/* hides the drop down menu items until you mouse over the navigation element that contains the drop down menu */
 .visually_hidden {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -99,7 +103,7 @@ nav ul li:first-child a:hover {
     border-top-left-radius: 6px;
 }
 
-/* The parent container needs to have a position specified as well or the absolute element will be positioned base off of the browser window top left */
+/* parent container needs to have a position specified as well or the absolute element will be positioned base off of the browser window top left */
 nav ul ul {
     position: absolute;
     border-radius: 0 0 6px 6px; 
@@ -139,21 +143,15 @@ main {
 }
 
 h1 {
-	font: {
-		family: 'Lobster', cursive;
-		size: 1.5em;
-		weight: 400;
-	}
+	@include heading-font;
+	font-size: 1.5em;
 	text-align: center;
 	margin-bottom: 15px;
 }
 
 h2 {
-	font: {
-		family: 'Lobster', cursive;
-		size: 1.2em;
-		weight: 400;
-	}
+	@include heading-font;
+	font-size: 1.2em;
 	margin-bottom: 15px;
 	margin-top: 50px;
 }
@@ -189,6 +187,7 @@ main li {
 	font-size: .5em;
 }
 
+/* letting the cascade work here when it comes to the font that the footer will render in, an example of inheritance */
 footer p {
 	font: {
 		size: .6em;
