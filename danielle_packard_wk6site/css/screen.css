@@ -1,0 +1,188 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* global stylesheet */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* Meyer's reset pulled from Compass */
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 1366px;
+  /* the brief said the target screen is 1366x768 */
+  font-size: 1em;
+  font-weight: 300;
+  background-image: url(../images/grunge_wall.png);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+  border: 30px solid #000;
+  -webkit-box-shadow: inset 1px 8px 57px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 1px 8px 57px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 1px 8px 57px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* header & some of the overall styles for more general tags */
+header {
+  height: 100px;
+  background-color: #000;
+  -webkit-box-shadow: 1px 8px 57px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 8px 57px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 8px 57px 0px rgba(0, 0, 0, 0.75);
+}
+
+h1 {
+  font-family: "capture_itregular", stencil;
+  font-weight: normal;
+  font-size: 4em;
+  color: #fff;
+  padding-left: 100px;
+}
+
+h2 {
+  font-family: "capture_itregular", stencil;
+  font-weight: normal;
+  font-size: 1.5em;
+  color: #fff;
+  letter-spacing: 2px;
+  padding-left: 175px;
+}
+
+h3 {
+  font-family: "capture_itregular", stencil;
+  font-weight: normal;
+  font-size: 1.2em;
+  color: #000;
+  letter-spacing: 2px;
+  margin-left: 100px;
+}
+
+p {
+  font-size: .9em;
+  margin-bottom: 15px;
+  margin-right: 60%;
+  margin-left: 100px;
+}
+
+/* summary */
+.summary {
+  margin-top: 30px;
+}
+
+/* footer */
+footer {
+  margin-left: 100px;
+  margin-bottom: 15px;
+}
+
+/* aside */
+aside {
+  float: right;
+  margin-right: 75px;
+  margin-top: -1400px;
+}
+
+aside h3 {
+  margin-left: 0;
+  /* this uninherits h3's from having left margin of 100px */
+}
+
+/* you said to keep things in we tried and that we couldn't get to work.
+I was trying to get an image below the aside. I know it had to be a background
+image. Just couldn't get it placed down there. */
+/* .zen-translations {
+	background: url(../images/graffiti_alphabet.jpg) no-repeat 75% 50px;
+}*/
+.archives {
+  margin-top: 30px;
+}
+
+.resources {
+  margin-top: 30px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* images */
+.page-wrapper {
+  background: url(../images/graffiti_1.jpg) repeat-y 55%;
+}
+
+/* navigation links */
+a {
+  text-decoration: underline;
+}
+
+a:link {
+  color: dimgray;
+  /* dimgray */
+}
+
+a:visited {
+  color: #808080;
+  /* gray */
+}
+
+a:hover {
+  color: #000;
+  background-color: #c0c0c0;
+  /* silver */
+}

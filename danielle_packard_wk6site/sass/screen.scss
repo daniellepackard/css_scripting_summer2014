@@ -1,0 +1,139 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/* global stylesheet */
+
+// Import other files
+@import "compass/reset";  /* Meyer's reset pulled from Compass */
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
+@import "mixins.scss";
+@import "variables.scss";
+
+*, *:before, *:after {
+	@import "compass/css3/box-sizing";
+}
+
+body {
+	@include body;
+	background-image: url(../images/grunge_wall.png);
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: 'Ubuntu', sans-serif;
+	border: 30px solid #000;
+	@include inset-box-shadow;
+}
+
+/* header & some of the overall styles for more general tags */
+header {
+	height: 100px;
+	background-color: #000;
+	@include bottom-box-shadow;
+}
+
+h1 {
+	font: {
+		family: $specialty_font;
+		weight: $normal_font;
+		size: 4em;
+	}
+	color: #fff;
+	padding-left: 100px;
+}
+
+h2 {
+	font: {
+		family: $specialty_font;
+		weight: $normal_font;
+		size: 1.5em;
+	}
+	color: #fff;
+	letter-spacing: 2px;
+	padding-left: 175px;
+}
+
+h3 {
+	font: {
+		family: $specialty_font;
+		weight: $normal_font;
+		size: 1.2em;
+	}
+	color: #000;
+	letter-spacing: 2px;
+	margin-left: 100px;
+}
+
+p {
+	font: {
+		size: .9em;
+	}
+	margin-bottom: 15px;
+	margin-right: 60%;
+	margin-left: 100px;
+}
+
+/* summary */
+.summary {
+	margin-top: 30px;
+}
+
+/* footer */
+footer {
+	margin-left: 100px;
+	margin-bottom: 15px;
+}
+
+/* aside */
+aside {
+	float: right;
+	margin-right: 75px;
+	margin-top: -1400px;
+}
+
+aside h3 {
+	margin-left: 0;  /* this uninherits h3's from having left margin of 100px */
+}
+
+
+/* you said to keep things in we tried and that we couldn't get to work.
+I was trying to get an image below the aside. I know it had to be a background
+image. Just couldn't get it placed down there. */
+/* .zen-translations {
+	background: url(../images/graffiti_alphabet.jpg) no-repeat 75% 50px;
+}*/
+
+.archives {
+	margin-top: 30px;
+}
+
+.resources {
+	margin-top: 30px;
+}
+
+li {
+	margin-bottom: 10px;
+}
+
+/* images */
+.page-wrapper {
+	background: url(../images/graffiti_1.jpg) repeat-y 55%;
+}
+
+/* navigation links */
+a  {
+	text-decoration: underline;
+}
+
+a:link  {
+	color: rgb(105,105,105);  /* dimgray */
+}
+
+a:visited  {
+	color: #808080;  /* gray */
+}
+
+a:hover  {
+	color: #000;
+	background-color: #c0c0c0;  /* silver */
+}

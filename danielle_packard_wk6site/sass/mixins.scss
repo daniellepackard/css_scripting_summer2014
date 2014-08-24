@@ -1,0 +1,19 @@
+@mixin body {
+	margin: 0;
+	padding: 0;
+	max-width: 1366px;  /* the brief said the target screen is 1366x768 */
+	font-size: 1em;
+	font-weight: 300;
+}
+
+@mixin bottom-box-shadow {
+	-webkit-box-shadow: 1px 8px 57px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 8px 57px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 8px 57px 0px rgba(0,0,0,0.75);
+}
+
+@mixin inset-box-shadow {
+	-webkit-box-shadow: inset 1px 8px 57px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 1px 8px 57px 0px rgba(0,0,0,0.75);
+	box-shadow: inset 1px 8px 57px 0px rgba(0,0,0,0.75);
+}
