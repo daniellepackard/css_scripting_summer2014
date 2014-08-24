@@ -3,10 +3,12 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+ /* CSS validated first try. Pretty cool given this is my first time using Compass, and being so new to SASS. */
+
 /* global stylesheet */
 
 // Import other files
-@import "compass/reset";  /* Meyer's reset pulled from Compass */
+/* Meyer's reset pulled from Compass */ @import "compass/reset";  
 @import url(http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);
 @import "mixins.scss";
 @import "variables.scss";
@@ -22,7 +24,7 @@ body {
 	background-size: cover;
 	font-family: 'Ubuntu', sans-serif;
 	border: 30px solid #000;
-	@include inset-box-shadow;
+	@include inset-box-shadow;  /* an example of the use of box-shadow as an inset */
 }
 
 /* header & some of the overall styles for more general tags */
@@ -49,7 +51,9 @@ h2 {
 		size: 1.5em;
 	}
 	color: #fff;
-	letter-spacing: 2px;
+	/* an example of the use of letter spacing to adjust the kerning of
+	the letter so they were easier to read */
+	letter-spacing: 2px;  
 	padding-left: 175px;
 }
 
@@ -85,14 +89,15 @@ footer {
 }
 
 /* aside */
+/* another example of inheritance. all the children of the aside will inherit these margins and the float...three sections of content */
 aside {
-	float: right;
+	float: right;  /* an example of the use of the float property to float everything in the aside */
 	margin-right: 75px;
 	margin-top: -1400px;
 }
 
 aside h3 {
-	margin-left: 0;  /* this uninherits h3's from having left margin of 100px */
+	margin-left: 0;  /* this un-inherits h3's from having left margin of 100px */
 }
 
 
@@ -111,6 +116,7 @@ image. Just couldn't get it placed down there. */
 	margin-top: 30px;
 }
 
+/* example of using a descendent selector to style the space between the links to they were easier to read */
 li {
 	margin-bottom: 10px;
 }
@@ -121,6 +127,7 @@ li {
 }
 
 /* navigation links */
+/* examples of inheritance in all of these. these set all links to the following */
 a  {
 	text-decoration: underline;
 }
