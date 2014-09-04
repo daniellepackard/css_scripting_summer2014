@@ -5,8 +5,6 @@
 
 @import "compass/reset";
 
-// Import other files
-
 *, *:before, *:after {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -22,22 +20,23 @@ body {
 	background-color: rgb(69,28,4);
 }
 
+/* I cannot for the life of me figure out why there is space above and below this.
+I've tried everything I can think of to figure it out. I'm thinking it is some bit
+of code for the nav but I can see what in that would mess this up. Grrrrr. What's doing this??? */
+header {
+    background-color: rgb(255,222,182);
+}
+
 h1 {
+    margin-left: 150px;
+    padding: 25px 0 25px 0;
 	font-family: 'Lobster', cursive;
+    color: rgb(69,28,4);
 	font-style: normal;
 	font-size: 2.5em;
 }
 
-header {
-	background-color: rgb(255,82,134);
-}
-
-.group.after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
+/* navigation bar */
 /* hides the drop down menu items until you mouse over the navigation element that contains the drop down menu */
 .visually_hidden {
     position: absolute !important;
@@ -54,13 +53,18 @@ nav ul {
     list-style: none;
     text-align: center;
     background-color: rgba(255,255,255,.5);
-    border-bottom: 2px solid rgb(255,255,255);
 }
 
 nav ul li {
     width: auto;
     display: inline-block;
     margin: 0 10px 0 10px;
+}
+
+/* IE7/6 fix for display inline-block bug */
+.ie7 nav ul li {
+    display:inline;
+    zoom:1;
 }
 
 /* this is the main navigation bar links */
@@ -79,10 +83,6 @@ nav ul li a:hover {
     background-color: rgba(18,5,3,.5);
 }
 
-// nav ul li:first-child a:hover {
-//     border-top-left-radius: 6px;
-// }
-
 /* parent container needs to have a position specified as well or the absolute element will be positioned base off of the browser window top left */
 nav ul ul {
     position: absolute;
@@ -95,13 +95,14 @@ nav ul ul li {
     text-align: left;
     margin-left: -1px;
     margin-top: 4px;
-    width: 85px;
+    width: 95px;
     font-size: .8em;
     letter-spacing: 2px;
 }
 
-nav ul ul li:first-child a:hover {
+nav ul ul li a:hover {
     border-top-left-radius: 0;
+    width: 100%;
 }
 
 nav ul li:hover > ul {
@@ -110,19 +111,48 @@ nav ul li:hover > ul {
     width: auto !important;
 }
 
+/* hero img */
+.hero_img {
+    /* for some reason there is weird space here too...Compass Reset??? */
+    margin-top: -16px;
+    height: 400px;
+    background-image: url(../images/chocolates.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* main content */
+p {
+   margin: 30px 25% 0 25%;
+   color: rgb(255,222,182);
+   text-align: center;
+   font-size: 1em;
+   line-height: 1.3em;
+   letter-spacing: 2px;
+}
+
+span {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2em;
+}
+
+.link {
+    text-decoration: underline;
+    font-weight: 200;
+}
+
 /* navigation links */
 a  {
 	text-decoration: none;
 }
 
 a:link  {
-	color: color;
+	color: #fff;
+    /* add a little weight to all links so they stand out a bit more */
+    font-weight: 400;
 }
 
 a:visited  {
-	color: color;
-}
-
-a:hover  {
-	color: color;
+	color: rgb(69,28,4);
 }
