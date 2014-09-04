@@ -1,0 +1,128 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+// Import other files
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	background-color: rgb(69,28,4);
+}
+
+h1 {
+	font-family: 'Lobster', cursive;
+	font-style: normal;
+	font-size: 2.5em;
+}
+
+header {
+	background-color: rgb(255,82,134);
+}
+
+.group.after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* hides the drop down menu items until you mouse over the navigation element that contains the drop down menu */
+.visually_hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: rgba(255,255,255,.5);
+    border-bottom: 2px solid rgb(255,255,255);
+}
+
+nav ul li {
+    width: auto;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+/* this is the main navigation bar links */
+nav ul li a {
+    text-decoration: none;
+    color: rgba(255,255,255,.9);
+    padding: .5em;
+    display: block;
+    font-size: .8em;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+
+/* using the psuedo class of :hover to style the hover state on the nav link */
+nav ul li a:hover { 
+    background-color: rgba(18,5,3,.5);
+}
+
+// nav ul li:first-child a:hover {
+//     border-top-left-radius: 6px;
+// }
+
+/* parent container needs to have a position specified as well or the absolute element will be positioned base off of the browser window top left */
+nav ul ul {
+    position: absolute;
+    border-radius: 0 0 6px 6px; 
+}
+
+/* dropdown box navigation links */
+nav ul ul li {
+    display: block;
+    text-align: left;
+    margin-left: -1px;
+    margin-top: 4px;
+    width: 85px;
+    font-size: .8em;
+    letter-spacing: 2px;
+}
+
+nav ul ul li:first-child a:hover {
+    border-top-left-radius: 0;
+}
+
+nav ul li:hover > ul {
+    clip: auto;
+    height: auto !important;
+    width: auto !important;
+}
+
+/* navigation links */
+a  {
+	text-decoration: none;
+}
+
+a:link  {
+	color: color;
+}
+
+a:visited  {
+	color: color;
+}
+
+a:hover  {
+	color: color;
+}

@@ -1,0 +1,176 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 200;
+  background-color: #451c04;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  font-style: normal;
+  font-size: 2.5em;
+}
+
+header {
+  background-color: #ff5286;
+}
+
+.group.after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* hides the drop down menu items until you mouse over the navigation element that contains the drop down menu */
+.visually_hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid white;
+}
+
+nav ul li {
+  width: auto;
+  display: inline-block;
+  margin: 0 10px 0 10px;
+}
+
+/* this is the main navigation bar links */
+nav ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+  padding: .5em;
+  display: block;
+  font-size: .8em;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+/* using the psuedo class of :hover to style the hover state on the nav link */
+nav ul li a:hover {
+  background-color: rgba(18, 5, 3, 0.5);
+}
+
+/* parent container needs to have a position specified as well or the absolute element will be positioned base off of the browser window top left */
+nav ul ul {
+  position: absolute;
+  border-radius: 0 0 6px 6px;
+}
+
+/* dropdown box navigation links */
+nav ul ul li {
+  display: block;
+  text-align: left;
+  margin-left: -1px;
+  margin-top: 4px;
+  width: 85px;
+  font-size: .8em;
+  letter-spacing: 2px;
+}
+
+nav ul ul li:first-child a:hover {
+  border-top-left-radius: 0;
+}
+
+nav ul li:hover > ul {
+  clip: auto;
+  height: auto !important;
+  width: auto !important;
+}
+
+/* navigation links */
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: color;
+}
+
+a:visited {
+  color: color;
+}
+
+a:hover {
+  color: color;
+}
