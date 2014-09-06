@@ -1,0 +1,264 @@
+/* I started this project in SASS with Compass, but stuff kept acting
+weird, so after troubleshooting on and off for several days I just decided
+to go back to the basics and change the project over to just css. */
+
+/* resetting the box model - p. 467*/
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* this is an example of the parent tag setting font family and weight
+for all children to inherit unless the children specifically have styles
+applied to them to change this, see h1 */
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	background-color: rgb(69,28,4);
+}
+
+header {
+    background-color: rgb(255,222,182);
+}
+
+/* this is an example of changing the font family that has been set for the parent, body,
+so h1 is a different typeface from what has been set for that parent and thereby
+all its descendents*/
+h1 {
+    margin-left: 150px;
+    padding: 25px 0 25px 0;
+	font-family: 'Lobster', cursive;
+    color: rgb(69,28,4);
+	font-style: normal;
+	font-size: 2.5em;
+}
+
+/* navigation bar */
+/* hides the drop down menu items until you mouse over the navigation element that contains the drop down menu */
+/* p. 498 */
+.visually_hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: rgba(255,255,255,.5);
+}
+
+nav ul li {
+    width: auto;
+    display: inline-block;
+    margin: 0 10px 17px 10px;
+}
+
+/* IE7/6 fix for display inline-block bug */
+.ie7 nav ul li {
+    display: inline;
+    zoom: 1;
+}
+
+/* this is the main navigation bar links */
+nav ul li a {
+    text-decoration: none;
+    color: rgba(255,255,255,.9);
+    padding: .5em;
+    display: block;
+    font-size: .8em;
+    font-style: normal;
+    letter-spacing: 2px;
+}
+
+/* using the psuedo class of :hover to style the hover state on the nav link */
+nav ul li a:hover { 
+    background-color: rgba(18,5,3,.5);
+}
+
+/* parent container needs to have a position specified as well or the absolute element will be positioned base off of the browser window top left */
+nav ul ul {
+    position: absolute;
+    border-radius: 0 0 6px 6px; 
+}
+
+/* dropdown box navigation links */
+nav ul ul li {
+    display: block;
+    text-align: left;
+    margin-left: -1px;
+    margin-top: 4px;
+    width: 95px;
+    font-size: .8em;
+    letter-spacing: 2px;
+}
+
+nav ul ul li a:hover {
+    border-top-left-radius: 0;
+    width: 100%;
+}
+
+nav ul li:hover > ul {
+    clip: auto;
+    height: auto !important;
+    width: auto !important;
+}
+
+/* hero img */
+.hero_img {
+    /* for some reason there is weird space here too...Compass Reset??? */
+    margin-top: -16px;
+    height: 400px;
+    background-image: url(../images/chocolates.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* main content */
+p {
+   margin: 30px 25% 0 25%;
+   color: rgb(255,222,182);
+   text-align: center;
+   font-size: 1em;
+   line-height: 1.3em;
+   letter-spacing: 2px;
+}
+
+span {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2em;
+}
+
+.link a {
+    text-decoration: underline;
+    font-weight: 200;
+    color: rgb(255,222,182);
+}
+
+.link a:hover {
+    color: rgba(255,222,182,.5);
+}
+
+/* creme section */
+.creme_section {
+    width: 100%;
+    height: 75px;
+    background-color: rgb(255,222,182);
+    color: rgba(69,28,4);
+}
+
+.creme_section p {
+    color: rgb(69,28,4);
+    font-weight: 400;
+    font-size: .8em;
+    padding-top: 10px;
+}
+
+/* for whatever reason there was huge spaces between these. it was like my 
+reset wasn't working. lots of weird stuff going on. this code is to get
+rid of this extra space */
+.info {
+    margin-top: -8px;
+}
+
+/* social media icons */
+.social_icons {
+    text-align: center;
+}
+
+.social_icons ul {
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: -10px;
+}
+
+.social_icons li a:hover {
+    color: rgba(255,222,182,.5);
+}
+
+.social_icons a:link {
+    color: rgb(255,222,182);
+}
+
+.social_icons a:visited {
+    color: rgba(255,222,182,.1);
+}
+
+.social_icons img {
+    max-width: 40px;
+}
+
+/* footer */
+footer {
+    background-color: rgb(255,222,182);
+    width: 100%;
+    font-weight: 400;
+}
+
+footer p {
+    padding: 5px 0 5px 0;
+    color: rgb(69,28,4);
+    font-size: .7em;
+    text-align: center;
+}
+
+/* example of a media queries to maked creme section taller so type doesn't
+get messed up as the browser size sizes down */
+@media (max-width: 1008px) {
+    .creme_section {height: 100px;}
+}
+
+@media (max-width: 689px) {
+    h1 {
+        margin-left: 100px;
+    }
+
+    nav ul li {
+        font-size: .7em;
+        margin: 0 5px 17px 5px;
+    }
+}
+
+@media (max-width: 547px) {
+    .creme_section {height: 130px;}
+}
+
+@media (max-width: 500px) {
+    nav ul li {
+        font-size: .7em;
+        margin: 0 3px 19px 3px;
+    }
+}
+
+@media (max-width: 466px) {
+    .creme_section {height: 150px;}
+}
+
+@media (max-width: 371px) {
+    .creme_section {height: 170px;}
+}
+
+/* navigation links */
+a  {
+	text-decoration: none;
+}
+
+a:link  {
+	color: #fff;
+    /* add a little weight to all links so they stand out a bit more */
+    font-weight: 400;
+}
+
+a:visited  {
+	color: rgb(69,28,4);
+}
