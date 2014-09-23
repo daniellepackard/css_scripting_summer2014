@@ -1,0 +1,62 @@
+/* this is an example of inheritance from the top. all the children of the body will inhert font size and weight
+unless they are individually changed on a particular element or selector */
+/* example of the use of a gradient in the background */
+section {
+  /* an example of inheritance. all child tags of the section will do what
+  is in these properties */
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+img {
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: #e9a92f;
+  font-family: 'Amble-Light-webfont', sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  padding-bottom: 30px;
+}
+
+.cap {
+  font-family: 'Petit Formal Script', cursive;
+  font-weight: 400;
+  font-size: 1.5em;
+  /* example of kerning applied between the 'W' and 'e' in Welcome to
+  correct the spacing, as it was to wide */
+  letter-spacing: -2px;
+}
+
+.map {
+  float: left;
+  margin-left: 10%;
+}
+
+p {
+  line-height: 1.5em;
+  width: 40%;
+  text-align: left;
+  float: left;
+  margin-left: 5%;
+}
+
+/* media query */
+/* I cannot get this to work, finally gave up. Was aiming to have both the map and paragraphy below
+it center under the image above it 
+@media (max-width: 970px) {	
+   	.map, p  {
+   		clear: both;
+   		margin: 0;
+   		padding: 0;
+   	}
+
+   	p {
+   		margin-top: 15px;
+   		text-align: none;
+   	}
+ } */
+footer {
+  clear: both;
+}

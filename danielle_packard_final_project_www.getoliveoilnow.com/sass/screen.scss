@@ -1,0 +1,148 @@
+// This is the global stylesheet, each page also has its own stylesheet
+// for the section content.
+
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+// Import other files
+/* Meyer's reset pulled from Compass */
+@import "compass/reset";
+@import "mixins.scss";
+@import "variables.scss";
+
+/* three examples of embedded fonts that are used throughout the site */
+/* each font type of called on in the different places it is needed throughout the stylesheets */
+@font-face {
+    font-family: 'Amble-Bold-webfont';
+    src: url('../fonts/Amble-Bold-webfont.eot');
+    src: url('../fonts/Amble-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Amble-Bold-webfont.woff') format('woff'),
+         url('../fonts/Amble-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Amble-Bold-webfont.svg#amblebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amble-Regular-webfont';
+    src: url('../fonts/Amble-Regular-webfont.eot');
+    src: url('../fonts/Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Amble-Regular-webfont.woff') format('woff'),
+         url('../fonts/Amble-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Amble-Regular-webfont.svg#ambleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Amble-Light-webfont';
+    src: url('../fonts/Amble-Light-webfont.eot');
+    src: url('../fonts/Amble-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Amble-Light-webfont.woff') format('woff'),
+         url('../fonts/Amble-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Amble-Light-webfont.svg#amblelight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, *:before, *:after {
+	@import "compass/css3/box-sizing";
+}
+
+/* stylesheet */
+body {
+	@include body;
+	@include background;
+}
+
+/* header */
+header {
+	/* example of the use of a background image */
+	background-image: url(../images/green_cup.png);
+}
+
+/* an example of a child descendent of the header */
+h1 {
+ 	color: $color_olive;
+ 	/* example of the use of a web font */
+ 	font-family: 'Petit Formal Script', cursive;
+ 	font-weight: 400;
+ 	font-size: 2em;
+ 	text-align: center;
+ 	padding: 30px 0 15px 0;
+ }
+
+h2 {
+ 	color: $color_olive;
+	font-family: 'Amble-Light-webfont', sans-serif;
+	font-weight: 300;
+	font-size: .9em;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+/* nav bar */
+nav {
+	background-color: $color_olive;
+	text-align: center;
+	/* example of the use of a box-shadow */
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+nav a {
+	padding: 15px 30px 15px 30px;
+	display: inline-block;
+}
+
+ul li {
+	display: inline-block;
+	list-style-type: none;
+	/* example of the proper use of padding to create space between links */
+	
+}
+
+/* footer */
+footer p {
+	color: #000;
+	/* an example of the use of text shadow */
+	text-shadow: 0 1px 1px $color_oil_yellow_hover;
+	font-size: .6em;
+	letter-spacing: 1px;
+	/* example of the use of a border as a divider between footer and page content */
+	border-top: 1px solid #000;
+	padding: 15px 0 15px 15px;
+	text-align: left;
+	width: 100%;
+}
+span {
+	color: $color_oil_yellow;
+}
+
+/* navigation links */
+/* examples of inheritance in all of these. these set all links to the following */
+a  {
+	text-decoration: none;
+}
+
+a:link  {
+	color: #000;
+}
+
+a:visited  {
+	color: $color_lime;
+}
+
+a:hover  {
+	color: #000;
+	background-color: $color_oil_yellow_hover;
+	padding: 14px 30px 13px 30px;
+	/* example of the use of border-radius */
+	border-radius: 5px 5px 5px 5px;
+	-moz-border-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border: 1px solid $color_oil_yellow_hover;
+}

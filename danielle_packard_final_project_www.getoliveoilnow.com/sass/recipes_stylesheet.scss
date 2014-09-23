@@ -1,0 +1,71 @@
+// recipes stylesheet for section content
+
+//Import other files
+@import "mixins.scss";
+@import "variables.scss";
+
+img {
+	margin-bottom: 30px;
+}
+
+h3 {
+	color: $color_oil_yellow;
+	font: {
+		family: 'Amble-Light-webfont', sans-serif;
+		weight: 300;
+		size: 1.5em;
+	}
+	text-align: center;
+	padding: 30px 0 30px 0;
+}
+
+.cap {
+	font-family: 'Petit Formal Script', cursive;
+ 	font-weight: 400;
+ 	font-size: 1.5em;
+ 	/* example of kerning applied between the 'W' and 'e' in Welcome to
+ 	correct the spacing, as it was to wide. though a bit less than was needed
+ 	on Welcome on home page */
+ 	letter-spacing: -2px;
+}
+
+/* recipes */
+.chipotle {
+	text-align: center;
+}
+
+.heirloom_caprese_salad {
+	text-align: center;
+}
+
+.grilled_fruit {
+	text-align: center;
+}
+
+.penne {
+	text-align: center;
+}
+
+.peach {
+	text-align: center;
+}
+
+.root_veggies {
+	text-align: center;
+}
+
+.lemon_pepper_hummus {
+	text-align: center;
+}
+
+.tomatoes {
+	text-align: center;
+}
+
+.steak {
+	text-align: center;
+}
+
+.easy_bruschetta {
+	text-align: center;
+}

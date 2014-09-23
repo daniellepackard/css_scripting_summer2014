@@ -1,0 +1,72 @@
+// vinegars & oils stylesheet for section content
+
+//Import other files
+@import "mixins.scss";
+@import "variables.scss";
+
+section {
+	/* an example of inheritance. all child tags of the section will do what
+	is in these properties */
+	text-align: center;
+	padding: 30px 0 30px 0;
+}
+
+img {
+	margin-bottom: 30px;
+}
+
+h3 {
+	color: $color_oil_yellow;
+	font: {
+		family: 'Amble-Light-webfont', sans-serif;
+		weight: 300;
+		size: 1.5em;
+	}
+	padding-bottom: 30px;
+}
+
+h4 {
+	font-family: $headings;
+	margin-bottom: 15px;
+}
+
+.cap {
+	font-family: 'Petit Formal Script', cursive;
+ 	font-weight: 400;
+ 	font-size: 1.5em;
+ 	/* example of kerning applied between the 'W' and 'e' in Welcome to
+ 	correct the spacing, as it was to wide */
+ 	letter-spacing: -3px;
+}
+
+p {
+	/* an example of using line height to give body text a bit more breahing room */
+	line-height: 1.5em;
+	text-align: left;
+	margin-bottom: 15px;
+}
+
+.column1 {
+	/* an example of the use of a float */
+	width: 40%;
+	float: left;
+	/* an example of the use of margin left to create space on the left
+	side of the float to pull it off of the left side of the browser */
+	margin-left: 10%;
+}
+
+.column2 {
+	width: 40%;
+	float: left;
+	margin-left: 5%;
+}
+
+.price {
+	margin-bottom: 30px;
+}
+
+footer {
+	/* an example of clearing the floats above so the footer goes below
+	floated areas and to the bottom of the page of content */
+	clear: both;
+}
